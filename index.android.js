@@ -22,7 +22,7 @@ class HelloWorld extends React.Component {
   }
   componentDidMount(){
     NativeModules.CallBackNative.getData((msg) => {
-        NativeModules.NativeToast.show(msg,NativeModules.NativeToast.SHORT);
+        NativeModules.NativeToast.show(msg + '你好',NativeModules.NativeToast.SHORT);
     });
   }
 }
