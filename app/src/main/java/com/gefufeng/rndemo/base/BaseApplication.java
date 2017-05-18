@@ -9,9 +9,18 @@ import android.content.pm.PackageManager;
 
 public class BaseApplication extends Application {
 
+    private static BaseApplication applicationInstance;
+
+
+    public static BaseApplication getInstance(){
+        return applicationInstance;
+
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
+        applicationInstance = this;
     }
 
     /**
